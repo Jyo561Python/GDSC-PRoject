@@ -1,0 +1,8 @@
+.vscode
+Prototype
+.buildozer
+bin
+__pycache__
+test.py
+main_auth.py
+LIVE_UI.kv

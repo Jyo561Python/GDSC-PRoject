@@ -1,0 +1,44 @@
+<CreateAccount@MDScreen>
+    name: "CreateAccount"
+    BoxLayout:
+        orientation: 'vertical'
+        spacing:dp(15)
+        pos_hint:{"top":1}
+        size_hint_y: None
+        height: dp(250)
+        Image:
+            id: logo
+            source: "assets/blood-donation_small.png"
+            size_hint_y: None
+            height:"80dp"
+            pos_hint:{"center_x":.5}
+        HeadingLabel:
+            text:"Hello, Ashutosh!" #+ app.user_name 
+    BoxLayout:
+        orientation: 'vertical'
+        pos_hint:{"top":.7}
+        size_hint_y: None
+        height: dp(360)
+        padding: dp(30)
+        spacing: dp(20)
+        HeadingLabel:
+            text: "     Additional details"
+            font_size: FONT_SIZE
+            height:self.font_size + dp(10)
+            halign:"left"
+        
+        CardTextField:
+            id: blood_group
+            hint_text:"Blood Group"
+        
+        CardTextField:
+            id: adhaar
+            hint_text:"Aadhar Number"
+        
+        GradientButton:
+            id: submit_button
+            text: "Get started!"
+            pos_hint:{"center_x":.5}
+            size_hint_x: 1
+            on_release:
+                # app.create_account()
